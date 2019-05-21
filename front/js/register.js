@@ -10,7 +10,7 @@ $(document).ready(() => {
             console.log(cpass);
             window.alert('password and confirm password dont match');
         }
-        else {
+        else{
             var url = 'https://loginq.herokuapp.com/populate?id=' + id + "&pass=" + pass;
             console.log(url);
             $.get(url , (result) => {
