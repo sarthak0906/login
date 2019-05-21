@@ -5,17 +5,19 @@ $(document).ready(() => {
         var id = $('#id').val();
         var pass = $('#pass').val();
         var cpass = $("#cpass").val();
-        if (pass != cpass){
-            console.log(pass);
-            console.log(cpass);
-            window.alert('password and confirm password dont match');
-        }
-        else{
+        // if (pass != cpass){
+        //     console.log(pass);
+        //     console.log(cpass);
+        //     window.alert('password and confirm password dont match');
+        // }
+        // else{
             var url = 'https://loginq.herokuapp.com/populate?id=' + id + "&pass=" + pass;
             console.log(url);
-            $.get(url , (result) => {
+            window.alert(url);
+            $.getJSON(url , (result) => {
                 console.log('result');
                 console.log(result);
+                window.alert(result);
                 if (result == 'err'){
                     window.alert('error in the process');
                 }
@@ -26,6 +28,6 @@ $(document).ready(() => {
                     window.alert('error in the process');
                 }
             })
-        }
+        // }
     })
 })
