@@ -1,0 +1,95 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+input[type=email],
+input[type=password] {
+    width: 100%;
+    padding: 8px 20px;
+    margin: 10px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 20px 20px 20px 20px;
+}
+
+.main {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    margin-top: 100px;
+    /* border: 1px solid burlywood; */
+}
+
+button {
+    background-color: #1e251f;
+    color: white;
+    padding: 8px 20px;
+    margin: 10px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 20px 20px 20px 20px;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+input[type=checkbox] {
+    margin-left: 10px;
+}
+
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+}
+
+.imgcontainer {
+    text-align: center;
+    margin: 20px 0 12px 0;
+}
+
+img.avatar {
+    width: 75%;
+}
+
+.pass {
+    text-align: center;
+}
+
+span.psw {
+    padding-top: 16px;
+}
+
+.box {
+    width: 40px;
+    height: 40px;
+    margin-top: -36px;
+    box-sizing: border-box;
+    text-align: center;
+    background-color: #a59f9f;
+    border-radius: 50%;
+}
+
+.box p {
+    padding-top: 8px;
+}
+
+hr {
+    border-top: 1px solid rgba(51, 49, 49, 0.9)
+}
+
+.dec {
+    font-size: 10px;
+}
+
+.rg {
+    font-size: 12px;
+}
+
+#align {
+    padding-left: 13px;
+}
