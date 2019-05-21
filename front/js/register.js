@@ -14,7 +14,7 @@ $(document).ready(() => {
             var url = 'https://loginq.herokuapp.com/populate?id=' + id + "&pass=" + pass;
             console.log(url);
             window.alert(url);
-            $.getJSON(url , (result) => {
+            $.get(url , (result) => {
                 console.log('result');
                 console.log(result);
                 window.alert(result);
