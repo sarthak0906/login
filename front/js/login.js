@@ -21,10 +21,13 @@ $(document).ready(() => {
                             signout();
                             clearInterval(intervalObject); 
                         } 
-                    }, 15000); 
+                    }, 7500);
+                    $('#id').val('');
+                    $('#pass').val('');
             }
             else {
                 window.alert('incorrect username id pair');
+                $('#pass').val('');
             }
         })
     })

@@ -17,6 +17,34 @@ app.listen(port, () => {
     console.log('we are live on ', port);
 })
 
+app.get('/populate', (req, res) => {
+    var id = req.query.id;
+    var pass = req.query.pass;
+    MongoClient.connect(db.url, {useNewUrlParser: true}, (err, client) => {
+        if (err){
+            res.send('err');
+            return console.log(err);
+        }
+        else{
+            console.log('connected to mongo');
+            database    = client.db(db.DB_NAME);
+            collection  = database.collection("login");
+    
+            var dbo = {id : id, pass : pass};
+            collection.insertOne(dbo, function(err, res){
+                if (err){
+                    console.log(err);
+                    res.send('err');
+                }
+                else{
+                    console.log('updated');
+                    res.send('success');
+                }
+            })
+        }
+    })
+})
+
 app.get('/login', (req, res) => {
     var id = req.query.id;
     var pass = req.query.pass;
