@@ -1,10 +1,13 @@
 $(document).ready(() => {
+    console.log('register');
     $('#register').on('click', (event) => {
-        // window.alert('random');
+        window.alert('random');
         var id = $('#id').val();
         var pass = $('#pass').val();
         var cpass = $("#cpass").val();
         if (pass != cpass){
+            console.log(pass);
+            console.log(cpass);
             window.alert('password and confirm password dont match');
         }
         else {

@@ -31,7 +31,7 @@ app.get('/populate', (req, res) => {
             collection  = database.collection("login");
     
             var dbo = {id : id, pass : pass};
-            collection.insertOne(dbo, function(err, res){
+            collection.insertOne(dbo, function(err, result){
                 if (err){
                     console.log(err);
                     res.send('err');
